@@ -1,0 +1,15 @@
+tasks:
+  -
+    name: go-test
+    language: Bash
+    code: |
+      make test
+    default: true
+    depends:
+      -
+        name: install-go
+  -
+    name: install-go
+    language: Bash
+    code: |
+      sudo apk add go
